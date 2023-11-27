@@ -4,38 +4,62 @@
              x:Class="MobileApp.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
             <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                
                 Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="StartAndExpand"
+                MaximumWidthRequest="200"
+                MaximumHeightRequest="50"
+                />
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                Grid.Row="0"
+                Grid.Column="1"
+                
+                Text="Mobile Application Placeholder Name"
+                HorizontalOptions="End"
+                VerticalOptions="CenterAndExpand"
+                />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                
+                x:Name="ViewAllProfilesButton"
+                Text="View All Profiles"
+                SemanticProperties.Hint="Navigates to the View All Profiles page."
+                MaximumWidthRequest="200"
+                MaximumHeightRequest="50"
+                HorizontalOptions="Center"
+                Clicked="ViewAllProfilesButton_Clicked" />
 
-        </VerticalStackLayout>
+            <Button
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                
+                x:Name="AddProfileButton"
+                Text="Add a Profile"
+                SemanticProperties.Hint="Navigates to the AddProfile page."
+                MaximumWidthRequest="200"
+                MaximumHeightRequest="50"
+                HorizontalOptions="Center"
+                Clicked="AddProfileButton_Clicked" />
+
+        </Grid>
     </ScrollView>
 
 </ContentPage>
