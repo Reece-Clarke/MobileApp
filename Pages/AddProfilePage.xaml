@@ -297,7 +297,7 @@
             BackgroundColor="Red"
             Clicked="CancelButton_Clicked" />
 
-        <!-- Button to add profile and update database, return user to MainPage  -->
+        <!-- Button to add profile and update database, return user to MainPage -->
         <Button
             Grid.Row="13" 
             Grid.Column="3"
