@@ -1,4 +1,5 @@
-﻿namespace MobileApp
+﻿
+namespace MobileApp
 {
     public partial class App : Application
     {
@@ -8,5 +9,6 @@
 
             MainPage = new MainPage();
         }
+
     }
 }

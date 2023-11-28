@@ -30,6 +30,7 @@
             Grid.Column="0"
             
             Text="Placeholder"
+            FontFamily="TrebuchetBold"
             BackgroundColor="Blue"
             HorizontalOptions="Fill" />
 
@@ -44,6 +45,7 @@
             Grid.Column="0"
             
             Text="Name"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkSlateBlue"
             HorizontalOptions="Fill" />
         <Entry 
@@ -58,6 +60,7 @@
             Grid.Column="0"
             
             Text="Id"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkGrey"
             HorizontalOptions="Fill"
             />
@@ -73,6 +76,7 @@
             Grid.Column="0"
             
             Text="PhoneNo"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkSlateBlue"
             HorizontalOptions="Fill" />
         <Entry 
@@ -87,6 +91,7 @@
             Grid.Column="0"
             
             Text="Department"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkGrey"
             HorizontalOptions="Fill" />
         <Entry 
@@ -101,6 +106,7 @@
             Grid.Column="0"
             
             Text="Street"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkSlateBlue"
             HorizontalOptions="Fill" />
         <Entry 
@@ -115,6 +121,7 @@
             Grid.Column="0"
             
             Text="City"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkGrey"
             HorizontalOptions="Fill" />
         <Entry 
@@ -129,6 +136,7 @@
             Grid.Column="0"
             
             Text="State"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkSlateBlue"
             HorizontalOptions="Fill" />
         <Entry 
@@ -143,6 +151,7 @@
             Grid.Column="0"
             
             Text="ZIP"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkGrey"
             HorizontalOptions="Fill" />
         <Entry 
@@ -157,6 +166,7 @@
             Grid.Column="0"
             
             Text="Country"
+            FontFamily="Trebuchet"
             BackgroundColor="DarkSlateBlue"
             HorizontalOptions="Fill" />
         <Entry 
@@ -171,6 +181,7 @@
             Grid.Column="0"
             
             Text="Cancel"
+            FontFamily="Trebuchet"
             MaximumWidthRequest="200"
             BackgroundColor="Red" />
 
@@ -179,6 +190,7 @@
             Grid.Column="1"
             
             Text="Add Profile"
+            FontFamily="Trebuchet"
             MaximumWidthRequest="200"
             BackgroundColor="Red" />
 

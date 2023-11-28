@@ -13,6 +13,9 @@ namespace MobileApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Trebuchet-MS.ttf", "Trebuchet");
+                    fonts.AddFont("Trebuchet-MS-Bold.ttf", "TrebuchetBold");
+                    fonts.AddFont("Trebuchet-MS-Italic.ttf", "TrebuchetItalic");
                 });
 
 #if DEBUG

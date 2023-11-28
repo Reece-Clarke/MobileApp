@@ -4,11 +4,14 @@
              x:Class="MobileApp.MainPage">
 
     <ScrollView>
+        <!-- UI Placement Setup -->
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="450"/>
             </Grid.RowDefinitions>
             
             <Grid.ColumnDefinitions>
@@ -16,48 +19,64 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
+            <!-- Background Image -->
+            <Image
+                Grid.Row="0"
+                Grid.RowSpan="5"
+                Grid.ColumnSpan="2"
+                Source="roi_pattern_3.png"
+                Aspect="AspectFill"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill" />
+
+            <!-- ROI Logo -->
             <Image
                 Grid.Row="0"
                 Grid.Column="0"
                 
-                Source="dotnet_bot.png"
-                HorizontalOptions="StartAndExpand"
-                MaximumWidthRequest="200"
-                MaximumHeightRequest="50"
+                Source="roi_logo.png"
+                HorizontalOptions="Start"
+                MaximumWidthRequest="644"
+                MaximumHeightRequest="336"
                 />
 
+            <!-- Name of App -->
             <Label
                 Grid.Row="0"
                 Grid.Column="1"
                 
                 Text="Mobile Application Placeholder Name"
-                HorizontalOptions="End"
+                FontFamily="TrebuchetBold"
+                HorizontalOptions="Fill"
                 VerticalOptions="CenterAndExpand"
                 />
 
-            <Button
-                Grid.Row="1"
-                Grid.ColumnSpan="2"
-                
-                x:Name="ViewAllProfilesButton"
-                Text="View All Profiles"
-                SemanticProperties.Hint="Navigates to the View All Profiles page."
-                MaximumWidthRequest="200"
-                MaximumHeightRequest="50"
-                HorizontalOptions="Center"
-                Clicked="ViewAllProfilesButton_Clicked" />
-
+            <!-- Add Profile Button -->
             <Button
                 Grid.Row="2"
                 Grid.ColumnSpan="2"
                 
                 x:Name="AddProfileButton"
                 Text="Add a Profile"
+                FontFamily="Trebuchet"
                 SemanticProperties.Hint="Navigates to the AddProfile page."
-                MaximumWidthRequest="200"
+                MaximumWidthRequest="250"
                 MaximumHeightRequest="50"
-                HorizontalOptions="Center"
+                HorizontalOptions="Fill"
                 Clicked="AddProfileButton_Clicked" />
+
+            <!-- View All Profiles Button -->
+            <Button
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                
+                x:Name="ViewAllProfilesButton"
+                Text="View All Profiles"
+                SemanticProperties.Hint="Navigates to the View All Profiles page."
+                MaximumWidthRequest="250"
+                MaximumHeightRequest="50"
+                HorizontalOptions="Fill"
+                Clicked="ViewAllProfilesButton_Clicked" />
 
         </Grid>
     </ScrollView>
