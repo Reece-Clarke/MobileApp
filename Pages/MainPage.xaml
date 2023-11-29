@@ -5,6 +5,7 @@
 
     <ScrollView>
         <!-- UI Placement Setup -->
+        <StackLayout>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
@@ -13,9 +14,9 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition Height="450"/>
             </Grid.RowDefinitions>
-            
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width ="Auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
@@ -27,8 +28,8 @@
                 
                 Source="roi_pattern_3.png"
                 Aspect="AspectFill"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill" />
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
 
             <!-- ROI Logo -->
             <Image
@@ -65,8 +66,10 @@
                 x:Name="AddProfileButton"
                 Text="Add a Profile"
                 FontFamily="Trebuchet"
-                FontSize="10"
-                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="14"
+                TextColor="#262626"  
+                BackgroundColor="#D9D9D9"
                 SemanticProperties.Hint="Navigates to the AddProfile page."
                 MaximumWidthRequest="250"
                 MaximumHeightRequest="50"
@@ -81,8 +84,10 @@
                 x:Name="ViewAllProfilesButton"
                 Text="View All Profiles"
                 FontFamily="Trebuchet"
-                FontSize="10"
-                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="14"
+                TextColor="#262626"  
+                BackgroundColor="#D9D9D9"
                 SemanticProperties.Hint="Navigates to the View All Profiles page."
                 MaximumWidthRequest="250"
                 MaximumHeightRequest="50"
@@ -90,6 +95,7 @@
                 Clicked="ViewAllProfilesButton_Clicked" />
 
         </Grid>
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>

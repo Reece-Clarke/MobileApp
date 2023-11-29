@@ -2,11 +2,99 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileApp.Pages.ViewAllProfilesPage"
+             xmlns:Controls="clr-namespace:MobileApp.Pages"
              Title="ViewAllProfilesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Background Image -->
+        <Image
+            Grid.Row="0"
+            Grid.RowSpan="4"
+            Grid.ColumnSpan="2"
+                
+            Source="roi_pattern_3.png"
+            Aspect="AspectFill"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <Label
+            />
+
+        <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10,0"
+            
+            x:Name="BackButton1"
+            Text="Back"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"  
+            BackgroundColor="#D9D9D9"
+            SemanticProperties.Hint="Navigates back to the Main Page."
+            MaximumWidthRequest="250"
+            MaximumHeightRequest="50"
+            HorizontalOptions="Fill"
+            Clicked="BackButton1_Clicked"/>
+
+        <ScrollView
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="2"
+            Margin="10,0" >
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                        <x:String>Item 3</x:String>
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                        <x:String>Item 3</x:String>
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                        <x:String>Item 3</x:String>
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                        <x:String>Item 3</x:String>
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                        <x:String>Item 3</x:String>
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label
+                            Text="{Binding .}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <!--    Possible solutions to geting profile information:
+                    Create seperate list view for each attribute of a profile,
+                    in the same scrollview, possibly only do name and id for
+                    quick implementation, and display all atributes when profile
+                    is selected in the ViewOneProfilePage.
+            -->
+        </ScrollView>
+        
+        
+    </Grid>
+    
 </ContentPage>
