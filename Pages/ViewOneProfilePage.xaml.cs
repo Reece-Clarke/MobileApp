@@ -42,7 +42,7 @@ public partial class ViewOneProfilePage : ContentPage
 
     private async void GoToUpdateProfileButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new UpdateProfilePage());
+        await Navigation.PushModalAsync(new UpdateProfilePage(singleEmployee));
         SemanticScreenReader.Announce(GoToUpdateProfileButton.Text);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +13,23 @@ namespace MobileApp
     {
         // Async connection created.
         SQLiteAsyncConnection _database;
+        string dbPath;
 
         public Database()
         {
+            
             // Database pathing.
-            string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Employees.db");
-
+            dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Employees.db");
+            
             // Database Async initializations
             _database = new SQLiteAsyncConnection(dbPath);
+
+            ////
+            // THIS MAY BE THIS BREAKING PHONE EMULATOR. Update: ISSUE FIXED?
+            ///
             _database.CreateTableAsync<Employee>().Wait();
+
+
 
             // Delete and drop table/objects. Should only be used to clear database if absolutely needed.
             //_database.DeleteAllAsync<Person>().Wait();
@@ -54,6 +63,24 @@ namespace MobileApp
         }
 
     }
+}
+// Gotten from Microsoft MAUI guide on local databases.
+// May need to remove this if it doesn't help. Look into singletons?
+// Update: Issue fixed, after this was introduced. Test it and clean up.
+public static class Constants
+{
+    public const string DatabaseFilename = "Employees.db";
+
+    public const SQLite.SQLiteOpenFlags Flags =
+        // Open the database in read/write mode
+        SQLite.SQLiteOpenFlags.ReadWrite |
+        // Create the database if it doesn't exist
+        SQLite.SQLiteOpenFlags.Create |
+        // Enable multi-threaded database access
+        SQLite.SQLiteOpenFlags.SharedCache;
+
+    public static string DatabasePath =>
+        Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
 }
 
 

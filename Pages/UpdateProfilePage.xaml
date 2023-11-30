@@ -41,7 +41,7 @@
                 Grid.Column="3"
                 Grid.ColumnSpan="2"
 
-                Text="Viewing Profile Details"
+                Text="Updating Profile"
                 FontFamily="TrebuchetBold"
                 FontAttributes="Bold"
                 FontSize="20"
@@ -50,24 +50,9 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />
 
-        <!-- Name label -->
-        <Label 
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="10,0"
-                
-                Text="Name"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
-
         <!-- ID label -->
         <Label 
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 Margin="10,0"
                 
@@ -80,6 +65,21 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
+        <!-- Name label -->
+        <Label 
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="10,0"
+                
+                Text="Name"
+                FontFamily="Trebuchet"
+                FontAttributes="Bold"
+                FontSize="16"
+                TextColor="#D9D9D9"
+                BackgroundColor="#262626"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="Fill" />
+        
         <!-- Phone Number label -->
         <Label 
                 Grid.Row="4"
@@ -186,15 +186,16 @@
                 HorizontalOptions="Fill" />
 
 
-        <!-- Unique Profile Details -->
-        <!-- Name Details -->
-        <Label 
+        <!-- Unique Profile Entry -->
+        <!-- Id Entry -->
+        <Entry 
                 Grid.Row="2"
                 Grid.Column="3"
                 Margin="10,0"
-           
-                x:Name="NameDetail"
-                Text="Name"
+                
+                x:Name="IdEntry"
+                Placeholder="{Binding Id}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -202,14 +203,15 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Id Details -->
-        <Label 
+        <!-- Name Entry -->
+        <Entry 
                 Grid.Row="3"
                 Grid.Column="3"
                 Margin="10,0"
-                
-                x:Name="IdDetail"
-                Text="Name"
+           
+                x:Name="NameEntry"
+                Placeholder="{Binding Name}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -217,29 +219,32 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Phone Number Details -->
-        <Label 
+        <!-- Phone Number Entry -->
+        <Entry 
                 Grid.Row="4"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="PhoneNoDetail"
-                Text="Name"
+                x:Name="PhoneNoEntry"
+                Placeholder="{Binding PhoneNo}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="20"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Department Details -->
-        <Label 
+        <!-- Department Entry -->
+        <Entry 
                 Grid.Row="5"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="DepartmentDetail"
-                Text="Name"
+                x:Name="DepartmentEntry"
+                Placeholder="{Binding Department}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -247,14 +252,15 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Street Details -->
-        <Label 
+        <!-- Street Entry -->
+        <Entry 
                 Grid.Row="6"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="StreetDetail"
-                Text="Name"
+                x:Name="StreetEntry"
+                Placeholder="{Binding Street}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -262,14 +268,15 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- City Details -->
-        <Label 
+        <!-- City Entry -->
+        <Entry 
                 Grid.Row="7"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="CityDetail"
-                Text="Name"
+                x:Name="CityEntry"
+                Placeholder="{Binding City}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -277,14 +284,15 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- State Details -->
-        <Label 
+        <!-- State Entry -->
+        <Entry 
                 Grid.Row="8"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="StateDetail"
-                Text="Name"
+                x:Name="StateEntry"
+                Placeholder="{Binding State}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -292,14 +300,15 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Zip Details -->
-        <Label 
+        <!-- Zip Entry -->
+        <Entry 
                 Grid.Row="9"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="ZipDetail"
-                Text="Name"
+                x:Name="ZipEntry"
+                Placeholder="{Binding Zip}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -307,14 +316,15 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Country Details -->
-        <Label 
+        <!-- Country Entry -->
+        <Entry 
                 Grid.Row="10"
                 Grid.Column="3"
                 Margin="10,0"
                 
-                x:Name="CountryDetail"
-                Text="Name"
+                x:Name="CountryEntry"
+                Placeholder="{Binding Country}"
+                PlaceholderColor="#262626"
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
@@ -322,7 +332,7 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Button to go back and return user to ViewallProfilesPage -->
+        <!-- Button to go back and return user to ViewOneProfilePage, without updating details -->
 
         <Button
                 Grid.Row="0" 
@@ -330,7 +340,7 @@
                 Grid.ColumnSpan="2"
                 Margin="10,10"
             
-                x:Name="CancelButton2"
+                x:Name="CancelButton3"
                 Text="Cancel"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
@@ -341,24 +351,25 @@
                 WidthRequest="150"
                 HorizontalOptions="Start"
                 VerticalOptions="CenterAndExpand"
-                />
+                Clicked="UpdateProfileBack"/>
 
-        <!-- Button to go to Update Profile page -->
+        <!-- Button to Update Profile details -->
         <Button
-                Grid.Row="13" 
-                Grid.Column="3"
-                Grid.ColumnSpan="2"
+            Grid.Row="13" 
+            Grid.Column="3"
+            Grid.ColumnSpan="2"
             
-                x:Name="Update Profile"
-                Text="Update Details"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="14"
-                TextColor="#262626"    
-                BackgroundColor="#D9D9D9"
-                MaximumWidthRequest="150"
-                HorizontalOptions="Fill"
-                VerticalOptions="CenterAndExpand"
-                />
+            x:Name="UpdateProfile"
+            Text="Update Details"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"    
+            BackgroundColor="#D9D9D9"
+            MaximumWidthRequest="150"
+            HorizontalOptions="Fill"
+            VerticalOptions="CenterAndExpand"
+            Clicked="UpdateEmployeeRecord_Clicked" />
+        
     </Grid>
 </ContentPage>

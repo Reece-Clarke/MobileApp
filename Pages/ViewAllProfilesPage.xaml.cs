@@ -10,8 +10,8 @@ public partial class ViewAllProfilesPage : ContentPage
 {
     // Initialize Database Services
     Database databaseService;
-    List<Employee> employees = new List<Employee>();
-    SQLiteAsyncConnection _database;
+    //List<Employee> employees = new List<Employee>();
+    //SQLiteAsyncConnection _database;
 
     public ViewAllProfilesPage()
 	{
@@ -20,14 +20,6 @@ public partial class ViewAllProfilesPage : ContentPage
         // Database functions and list assigned
         databaseService = new Database();
         RefreshEmployeeList();
-
-        //var someone = new List<Someone>()
-        //{   new Someone { id = "1", name = "Smith" },
-        //    new Someone { id = "2", name = "Black" }};
-
-        //// Uses DatabaseList[PH] to be viewed as a list in-page
-        //AllProfileListView.ItemsSource = someone;
-
     }
 
     // Returns user to previous page.
@@ -58,38 +50,13 @@ public partial class ViewAllProfilesPage : ContentPage
         }
     }
 
-    /////////////////////////
-    // Database Interactions
-    //
-    // Retrieves and assigns Employee records to AllProfileListView.
-    private async void RefreshEmployeeList()
+    private void RefreshListButton_Clicked(object sender, EventArgs e)
     {
-        AllProfileListView.ItemsSource = await databaseService.RetrieveEmployees();
+        RefreshEmployeeList();
     }
 
-
-    // Gets and updates an Employee record in the database based on list selection  CORRECT
-    public async void UpdatePersons_Clicked(object sender, EventArgs e)
-    {
-        if (AllProfileListView.SelectedItem != null)
-        {
-            //Get and set selected Employee
-            var selectedEmployee = (Employee)AllProfileListView.SelectedItem;
-
-            // Update parts of the selected Employee object
-            selectedEmployee.Name = "1";
-
-            // Update selected Employee in database, through another function
-            await databaseService.UpdateEmployeeAsync(selectedEmployee);
-            RefreshEmployeeList();
-
-        }
-
-        //return databaseService.Update(person);
-    }
-
-    // Delete a selected Employee record from the database using another function CORRECT
-    public async void DeletePersons(object sender, EventArgs e)
+    // Delete a selected Employee record from the database
+    private async void DeleteProfileButton_Clicked(object sender, EventArgs e)
     {
         if (AllProfileListView.SelectedItem != null)
         {
@@ -100,17 +67,15 @@ public partial class ViewAllProfilesPage : ContentPage
             await databaseService.DeleteEmployeeAsync(selectedEmployee);
             RefreshEmployeeList();
         }
-
     }
 
+    /////////////////////////
+    // Database Interactions
+    //
+    // Retrieves and assigns Employee records to AllProfileListView.
+    public async void RefreshEmployeeList()
+    {
+        AllProfileListView.ItemsSource = await databaseService.RetrieveEmployees();
+    }
 
 }
-
-
-
-//public class Someone
-//{
-//    public string id { get; set; }
-//    public string name { get; set; }
-//}
-

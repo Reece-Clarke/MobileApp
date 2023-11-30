@@ -52,24 +52,9 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />
 
-        <!-- Name label -->
-        <Label 
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="10,0"
-                
-                Text="Name"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
-
         <!-- ID label -->
         <Label 
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 Margin="10,0"
                 
@@ -79,6 +64,21 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#3b3b3b"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="Fill" />
+
+        <!-- Name label -->
+        <Label 
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="10,0"
+                
+                Text="Name"
+                FontFamily="Trebuchet"
+                FontAttributes="Bold"
+                FontSize="16"
+                TextColor="#D9D9D9"
+                BackgroundColor="#262626"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -189,13 +189,13 @@
 
 
         <!-- Unique Profile Details -->
-        <!-- Name Details -->
+        <!-- Id Details -->
         <Label 
                 Grid.Row="2"
                 Grid.Column="3"
                 Margin="10,0"
-           
-                x:Name="NameDetail"
+                
+                x:Name="IdDetail"
                 Text="Name"
                 FontFamily="Trebuchet"
                 FontSize="10"
@@ -203,14 +203,14 @@
                 BackgroundColor="#D9D9D9"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
-
-        <!-- Id Details -->
+        
+        <!-- Name Details -->
         <Label 
                 Grid.Row="3"
                 Grid.Column="3"
                 Margin="10,0"
-                
-                x:Name="IdDetail"
+           
+                x:Name="NameDetail"
                 Text="Name"
                 FontFamily="Trebuchet"
                 FontSize="10"
