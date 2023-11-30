@@ -4,9 +4,10 @@
              x:Class="MobileApp.Pages.ViewAllProfilesPage"
              xmlns:Controls="clr-namespace:MobileApp.Pages"
              Title="ViewAllProfilesPage">
+    <!-- General container for page contents -->
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -26,14 +27,12 @@
             Aspect="AspectFill"
             HorizontalOptions="Center"
             VerticalOptions="Center" />
-
-        <Label
-            />
-
+        
+        <!-- Button to return back to MainPage -->
         <Button
             Grid.Row="0"
             Grid.Column="0"
-            Margin="10,0"
+            Margin="10,10"
             
             x:Name="BackButton1"
             Text="Back"
@@ -43,58 +42,107 @@
             TextColor="#262626"  
             BackgroundColor="#D9D9D9"
             SemanticProperties.Hint="Navigates back to the Main Page."
+            WidthRequest="150"
             MaximumWidthRequest="250"
             MaximumHeightRequest="50"
-            HorizontalOptions="Fill"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
             Clicked="BackButton1_Clicked"/>
 
-        <ScrollView
+        <!-- Page Title -->
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="10,10"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Viewing all profiles" />
+
+        <!-- Contains both header and profile list -->
+        <VerticalStackLayout
             Grid.Row="1"
             Grid.Column="0"
             Grid.RowSpan="3"
             Grid.ColumnSpan="2"
             Margin="10,0" >
-            <ListView>
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Item 1</x:String>
-                        <x:String>Item 2</x:String>
-                        <x:String>Item 3</x:String>
-                        <x:String>Item 1</x:String>
-                        <x:String>Item 2</x:String>
-                        <x:String>Item 3</x:String>
-                        <x:String>Item 1</x:String>
-                        <x:String>Item 2</x:String>
-                        <x:String>Item 3</x:String>
-                        <x:String>Item 1</x:String>
-                        <x:String>Item 2</x:String>
-                        <x:String>Item 3</x:String>
-                        <x:String>Item 1</x:String>
-                        <x:String>Item 2</x:String>
-                        <x:String>Item 3</x:String>
-                        <x:String>Item 1</x:String>
-                        <x:String>Item 2</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Label
-                            Text="{Binding .}"/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+            <!-- Contains header for listview-->
+            <HorizontalStackLayout>
+                <Label
+                    Margin="10, 0"
+                    HorizontalTextAlignment="Center"
+                    Text="ID" />
+                <Label
+                    Margin="10, 0"
+                    HorizontalTextAlignment="Center"
+                    Text="Name" />
+            </HorizontalStackLayout>
+
+            <!-- Scrolling container for profile listview-->
+            <ScrollView
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="2"
+            Margin="10,0" >
+
+                <!-- Selectable list of profiles-->
+                <ListView
+                x:Name="AllProfileListView"
+                ItemTapped="AllProfileListView_ItemTapped" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <HorizontalStackLayout>
+                                    <Label
+                                        Margin="10, 10"
+                                        Text="{Binding Id}"
+                                        TextColor="Black"
+                                        BackgroundColor="White" />
+                                    <Label
+                                        x:Name="ProfileName"
+                                        Margin="10, 10"
+                                        Text="{Binding Name}"
+                                        TextColor="Black"
+                                        BackgroundColor="White" />
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--    Possible solutions to geting profile information:
+                        Create seperate list view for each attribute of a profile,
+                        in the same scrollview, possibly only do name and id for
+                        quick implementation, and display all atributes when profile
+                        is selected in the ViewOneProfilePage.
+                -->
+            </ScrollView>
+        </VerticalStackLayout>
+
+        <!-- Button to go into profile details for a selected profile OUTDATED -->
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="10,0"
             
-            <!--    Possible solutions to geting profile information:
-                    Create seperate list view for each attribute of a profile,
-                    in the same scrollview, possibly only do name and id for
-                    quick implementation, and display all atributes when profile
-                    is selected in the ViewOneProfilePage.
-            -->
-        </ScrollView>
-        
-        
+            x:Name="ProfileDetailButton"
+            Text="Go to Profile"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"  
+            BackgroundColor="#D9D9D9"
+            SemanticProperties.Hint="Navigates to a selected profile's details page."
+            WidthRequest="150"
+            MaximumWidthRequest="250"
+            MaximumHeightRequest="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            />
     </Grid>
+    
     
 </ContentPage>

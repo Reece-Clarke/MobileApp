@@ -1,11 +1,23 @@
+using SQLite;
+using System.IO;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace MobileApp.Pages;
 
 public partial class AddProfilePage : ContentPage
 {
-	public AddProfilePage()
+    Database databaseService;
+    List<Employee> employee = new List<Employee>();
+    SQLiteAsyncConnection _database;
+
+    public AddProfilePage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+
+        databaseService = new Database();
+    }
 
     // Returns user to previous page without adding a profile.
     private async void CancelButton_Clicked(object sender, EventArgs e)
@@ -16,17 +28,23 @@ public partial class AddProfilePage : ContentPage
 
     // Adds a profile to the database using entry fields for submitted reference, and
     // returns user to previous page afterwards.
-    private async void AddProfileButton_Clicked(object sender, EventArgs e)
+    private async void AddEmployee_Clicked(object sender, EventArgs e)
     {
-        string name = NameEntry.Text;
-        string id = IdEntry.Text;
-        string phoneNo = PhoneNoEntry.Text;
-        string department = DepartmentEntry.Text;
-        string street = StreetEntry.Text;
-        string city = CityEntry.Text;
-        string state = StateEntry.Text;
-        string zip = ZipEntry.Text;
-        string country = CountryEntry.Text;
+        // Create new Employee object to be added a record to the database
+        var employee = new Employee
+        {
+            Name = NameEntry.Text,
+            Id = IdEntry.Text,
+            PhoneNo = PhoneNoEntry.Text,
+            Department = DepartmentEntry.Text,
+            Street = StreetEntry.Text,
+            City = CityEntry.Text,
+            State = StateEntry.Text,
+            Zip = ZipEntry.Text,
+            Country = CountryEntry.Text
+        };
+
+        await databaseService.AddEmployeeAsync(employee);
 
         // PLACEHOLDER CODE, only returns user to previous page
         await DisplayAlert("Profile successfully added.", "Profile should now be present in View All Profiles.", "OK");

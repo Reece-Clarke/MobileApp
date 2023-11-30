@@ -369,7 +369,7 @@
                 MaximumWidthRequest="150"
                 HorizontalOptions="Fill"
                 VerticalOptions="CenterAndExpand"
-                Clicked="AddProfileButton_Clicked" />
+                Clicked="AddEmployee_Clicked" />
 
         </Grid>
 
