@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace MobileApp.Pages;
 
+// This page is used to view a list of selectable profiles, generated from a database.
+// When a profile is selected, it brings the user to a new details page based off that profile.
+// The user can also refresh the page and delete profiles from the page and database.
 public partial class ViewAllProfilesPage : ContentPage
 {
     // Initialize Database Services
     Database databaseService;
-    //List<Employee> employees = new List<Employee>();
-    //SQLiteAsyncConnection _database;
 
     public ViewAllProfilesPage()
 	{
@@ -69,9 +70,6 @@ public partial class ViewAllProfilesPage : ContentPage
         }
     }
 
-    /////////////////////////
-    // Database Interactions
-    //
     // Retrieves and assigns Employee records to AllProfileListView.
     public async void RefreshEmployeeList()
     {

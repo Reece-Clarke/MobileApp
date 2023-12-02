@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MobileApp.Pages;
 
+// Page can either return to the previous page (MainPage), or
+// have details entered and submitted as a new profile for the database.
 public partial class AddProfilePage : ContentPage
 {
     Database databaseService;
-    List<Employee> employee = new List<Employee>();
-    SQLiteAsyncConnection _database;
 
     public AddProfilePage()
 	{
@@ -20,15 +20,15 @@ public partial class AddProfilePage : ContentPage
     }
 
     // Returns user to previous page without adding a profile.
-    private async void CancelButton_Clicked(object sender, EventArgs e)
+    private async void AddProfileCancelButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PopModalAsync();
-        SemanticScreenReader.Announce(CancelButton.Text);
+        SemanticScreenReader.Announce(AddProfileCancelButton.Text);
     }
 
     // Adds a profile to the database using entry fields for submitted reference, and
     // returns user to previous page afterwards.
-    private async void AddEmployee_Clicked(object sender, EventArgs e)
+    private async void AddNewProfileButton_Clicked(object sender, EventArgs e)
     {
         // Create new Employee object to be added a record to the database
         var employee = new Employee
@@ -47,8 +47,8 @@ public partial class AddProfilePage : ContentPage
         await databaseService.AddEmployeeAsync(employee);
 
         // PLACEHOLDER CODE, only returns user to previous page
-        await DisplayAlert("Profile successfully added.", "Profile should now be present in View All Profiles.", "OK");
+        await DisplayAlert("Profile successfully added.", "Profile should now be present in when viewing all profiles.", "OK");
         await Navigation.PopModalAsync();
-        SemanticScreenReader.Announce(AddProfileButton.Text);
+        SemanticScreenReader.Announce(AddNewProfileButton.Text);
     }
 }

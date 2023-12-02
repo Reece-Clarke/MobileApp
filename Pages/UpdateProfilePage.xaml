@@ -3,40 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileApp.Pages.UpdateProfilePage"
              Title="UpdateProfilePage">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="75" />
-            <RowDefinition Height="25" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="125"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <!-- Background Image -->
-        <Image
+            <!-- Background Image -->
+            <Image
                 Grid.Row="0"
                 Grid.RowSpan="12"
                 Grid.ColumnSpan="5"
                 
                 Source="grey_texture_image.png"
                 Aspect="AspectFill"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
 
-        <!-- Profile Details Page Ttile -->
-        <Label 
+            <!-- Profile Details Page Ttile -->
+            <Label 
                 Grid.Row="0"
                 Grid.Column="3"
                 Grid.ColumnSpan="2"
@@ -50,9 +51,9 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />
 
-        <!-- ID label -->
-        <Label 
-                Grid.Row="2"
+            <!-- ID label -->
+            <Label 
+                Grid.Row="1"
                 Grid.Column="0"
                 Margin="10,0"
                 
@@ -65,9 +66,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Name label -->
-        <Label 
-                Grid.Row="3"
+            <!-- Name label -->
+            <Label 
+                Grid.Row="2"
                 Grid.Column="0"
                 Margin="10,0"
                 
@@ -80,9 +81,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
         
-        <!-- Phone Number label -->
-        <Label 
-                Grid.Row="4"
+            <!-- Phone Number label -->
+            <Label 
+                Grid.Row="3"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -95,9 +96,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Department label -->
-        <Label 
-                Grid.Row="5"
+            <!-- Department label -->
+            <Label 
+                Grid.Row="4"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -110,9 +111,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Street label -->
-        <Label 
-                Grid.Row="6"
+            <!-- Street label -->
+            <Label 
+                Grid.Row="5"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -125,9 +126,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- City label -->
-        <Label 
-                Grid.Row="7"
+            <!-- City label -->
+            <Label 
+                Grid.Row="6"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -140,9 +141,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- State label -->
-        <Label 
-                Grid.Row="8"
+            <!-- State label -->
+            <Label 
+                Grid.Row="7"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -155,9 +156,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- ZIP code label -->
-        <Label 
-                Grid.Row="9"
+            <!-- ZIP code label -->
+            <Label 
+                Grid.Row="8"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -170,9 +171,9 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Country label -->
-        <Label 
-                Grid.Row="10"
+            <!-- Country label -->
+            <Label 
+                Grid.Row="9"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -185,11 +186,10 @@
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-
-        <!-- Unique Profile Entry -->
-        <!-- Id Entry -->
-        <Entry 
-                Grid.Row="2"
+            <!-- Unique Profile Entry -->
+            <!-- Id Entry -->
+            <Entry 
+                Grid.Row="1"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -200,12 +200,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Name Entry -->
-        <Entry 
-                Grid.Row="3"
+            <!-- Name Entry -->
+            <Entry 
+                Grid.Row="2"
                 Grid.Column="3"
                 Margin="10,0"
            
@@ -216,12 +217,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Phone Number Entry -->
-        <Entry 
-                Grid.Row="4"
+            <!-- Phone Number Entry -->
+            <Entry 
+                Grid.Row="3"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -232,13 +234,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
-                HeightRequest="20"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Department Entry -->
-        <Entry 
-                Grid.Row="5"
+            <!-- Department Entry -->
+            <Entry 
+                Grid.Row="4"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -249,12 +251,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Street Entry -->
-        <Entry 
-                Grid.Row="6"
+            <!-- Street Entry -->
+            <Entry 
+                Grid.Row="5"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -265,12 +268,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- City Entry -->
-        <Entry 
-                Grid.Row="7"
+            <!-- City Entry -->
+            <Entry 
+                Grid.Row="6"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -281,12 +285,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- State Entry -->
-        <Entry 
-                Grid.Row="8"
+            <!-- State Entry -->
+            <Entry 
+                Grid.Row="7"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -297,12 +302,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Zip Entry -->
-        <Entry 
-                Grid.Row="9"
+            <!-- Zip Entry -->
+            <Entry 
+                Grid.Row="8"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -313,12 +319,13 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Country Entry -->
-        <Entry 
-                Grid.Row="10"
+            <!-- Country Entry -->
+            <Entry 
+                Grid.Row="9"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -329,47 +336,47 @@
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                HeightRequest="45"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
-        <!-- Button to go back and return user to ViewOneProfilePage, without updating details -->
+            <!-- Button to go back and return user to ViewOneProfilePage, without updating details -->
 
-        <Button
-                Grid.Row="0" 
+            <Button
+                Grid.Row="10" 
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="10,10"
+                Margin="5,10"
             
-                x:Name="CancelButton3"
+                x:Name="UpdateProfileCancelButton"
                 Text="Cancel"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
                 FontSize="14"
                 TextColor="#262626"
-                
                 BackgroundColor="#D9D9D9"
-                WidthRequest="150"
-                HorizontalOptions="Start"
-                VerticalOptions="CenterAndExpand"
-                Clicked="UpdateProfileBack"/>
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="UpdateProfileCancelButton_Clicked"/>
 
-        <!-- Button to Update Profile details -->
-        <Button
-            Grid.Row="13" 
-            Grid.Column="3"
-            Grid.ColumnSpan="2"
+            <!-- Button to Update Profile details -->
+            <Button
+                Grid.Row="10" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="5,10"
             
-            x:Name="UpdateProfile"
-            Text="Update Details"
-            FontFamily="Trebuchet"
-            FontAttributes="Bold"
-            FontSize="14"
-            TextColor="#262626"    
-            BackgroundColor="#D9D9D9"
-            MaximumWidthRequest="150"
-            HorizontalOptions="Fill"
-            VerticalOptions="CenterAndExpand"
-            Clicked="UpdateEmployeeRecord_Clicked" />
+                x:Name="UpdateProfile"
+                Text="Confirm Details"
+                FontFamily="Trebuchet"
+                FontAttributes="Bold"
+                FontSize="14"
+                TextColor="#262626"    
+                BackgroundColor="#D9D9D9"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="UpdateProfile_Clicked" />
         
-    </Grid>
+        </Grid>
+    </ScrollView>
 </ContentPage>

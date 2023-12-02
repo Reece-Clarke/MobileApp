@@ -3,374 +3,371 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileApp.Pages.AddProfilePage"
              Title="AddProfilePage">
+    <ScrollView>
     <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="125"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-               
-                <ColumnDefinition/>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition/>
-      
-            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
             <!-- Background Image -->
-            <Image
-                Grid.Row="0"
-                Grid.RowSpan="12"
-                Grid.ColumnSpan="5"
+        <Image
+            Grid.Row="0"
+            Grid.RowSpan="12"
+            Grid.ColumnSpan="5"
                 
-                Source="grey_texture_image.png"
-                Aspect="AspectFill"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
+            Source="grey_texture_image.png"
+            Aspect="AspectFill"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+        
+        <!-- Adding Profile Header -->
+        <Label 
+            Grid.Row="0"
+            Grid.Column="3"
+            Grid.ColumnSpan="2"
 
-            <!-- Adding Profile Header -->
-            <Label 
-                Grid.Row="0"
-                Grid.Column="3"
-                Grid.ColumnSpan="2"
-
-                Text="Adding Profile"
-                FontFamily="TrebuchetBold"
-                FontAttributes="Bold"
-                FontSize="20"
-                TextColor="#941a1d"
-                HorizontalTextAlignment="Start"
-                VerticalOptions="Center"
-                HorizontalOptions="Center" />
+            Text="Adding Profile"
+            FontFamily="TrebuchetBold"
+            FontAttributes="Bold"
+            FontSize="20"
+            TextColor="#941a1d"
+            HorizontalTextAlignment="Start"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
 
         <!-- ID label -->
         <Label 
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="10,0"
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="10,0"
                 
-                Text="Id"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#3b3b3b"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="Id"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#3b3b3b"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
         <!-- Name label -->
         <Label 
-                Grid.Row="3"
-                Grid.Column="0"
-                Margin="10,0"
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="10,0"
                 
-                Text="Name"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="Name"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#262626"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
         <!-- Phone Number label -->
-            <Label 
-                Grid.Row="4"
-                Grid.Column="0"
-                Margin="10,0"
+        <Label 
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="PhoneNo"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="PhoneNo"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#262626"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
-            <!-- Department label -->
-            <Label 
-                Grid.Row="5"
-                Grid.Column="0"
-                Margin="10,0"
+        <!-- Department label -->
+        <Label 
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="Department"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#3b3b3b"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="Department"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#3b3b3b"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
-            <!-- Street label -->
-            <Label 
-                Grid.Row="6"
-                Grid.Column="0"
-                Margin="10,0"
+        <!-- Street label -->
+        <Label 
+            Grid.Row="5"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="Street"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="Street"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#262626"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
-            <!-- City label -->
-            <Label 
-                Grid.Row="7"
-                Grid.Column="0"
-                Margin="10,0"
+        <!-- City label -->
+        <Label 
+            Grid.Row="6"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="City"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#3b3b3b"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="City"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#3b3b3b"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
-            <!-- State label -->
-            <Label 
-                Grid.Row="8"
-                Grid.Column="0"
-                Margin="10,0"
+        <!-- State label -->
+        <Label 
+            Grid.Row="7"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="State"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="State"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#262626"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
-            <!-- ZIP code label -->
-            <Label 
-                Grid.Row="9"
-                Grid.Column="0"
-                Margin="10,0"
+        <!-- ZIP code label -->
+        <Label 
+            Grid.Row="8"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="ZIP"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#3b3b3b"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="ZIP"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#3b3b3b"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
-            <!-- Country label -->
-            <Label 
-                Grid.Row="10"
-                Grid.Column="0"
-                Margin="10,0"
+        <!-- Country label -->
+        <Label 
+            Grid.Row="9"
+            Grid.Column="0"
+            Margin="10,0"
             
-                Text="Country"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#262626"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
+            Text="Country"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="16"
+            TextColor="#D9D9D9"
+            BackgroundColor="#262626"
+            VerticalTextAlignment="Center"
+            HorizontalOptions="Fill" />
 
 
-            <!-- Entries for headers -->
-            <!-- Id Entry -->
-            <Entry 
-                Grid.Row="2"
-                Grid.Column="3"
-                Margin="10,0"
+        <!-- Text Entries for profile details -->
+        <!-- Id Text Entry -->
+        <Entry 
+            Grid.Row="1"
+            Grid.Column="3"
+            Margin="10,0"
                 
-                x:Name="IdEntry"
-                Placeholder="|..."
-                PlaceholderColor="#262626"
-                FontFamily="Trebuchet"
-                FontSize="10"
-                TextColor="Black"
-                BackgroundColor="#D9D9D9"
-                HeightRequest="20"
-                HorizontalOptions="Fill" />
+            x:Name="IdEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
 
-            <!-- Name Entry -->
-            <Entry 
-                    Grid.Row="3"
-                    Grid.Column="3"
-                    Margin="10,0"
+        <!-- Name Text Entry -->
+        <Entry 
+            Grid.Row="2"
+            Grid.Column="3"
+            Margin="10,0"
            
-                    x:Name="NameEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
+            x:Name="NameEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
 
-            <!-- Phone Number Entry -->
-                <Entry 
-                    Grid.Row="4"
-                    Grid.Column="3"
-                    Margin="10,0"
+        <!-- Phone Number Text Entry -->
+        <Entry 
+            Grid.Row="3"
+            Grid.Column="3"
+            Margin="10,0"
                 
-                    x:Name="PhoneNoEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
-            
-                <!-- Department Entry -->
-                <Entry 
-                    Grid.Row="5"
-                    Grid.Column="3"
-                    Margin="10,0"
-                
-                    x:Name="DepartmentEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
-            
-                <!-- Street Entry -->
-                <Entry 
-                    Grid.Row="6"
-                    Grid.Column="3"
-                    Margin="10,0"
-                
-                    x:Name="StreetEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
-            
-                <!-- City Entry -->
-                <Entry 
-                    Grid.Row="7"
-                    Grid.Column="3"
-                    Margin="10,0"
-                
-                    x:Name="CityEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
-            
-                <!-- State Entry -->
-                <Entry 
-                    Grid.Row="8"
-                    Grid.Column="3"
-                    Margin="10,0"
-                
-                    x:Name="StateEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
-            
-                <!-- Zip Entry -->
-                <Entry 
-                    Grid.Row="9"
-                    Grid.Column="3"
-                    Margin="10,0"
-                
-                    x:Name="ZipEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
-            
-                <!-- Country Entry -->
-                <Entry 
-                    Grid.Row="10"
-                    Grid.Column="3"
-                    Margin="10,0"
-                
-                    x:Name="CountryEntry"
-                    Placeholder="|..."
-                    PlaceholderColor="#262626"
-                    FontFamily="Trebuchet"
-                    FontSize="10"
-                    TextColor="Black"
-                    BackgroundColor="#D9D9D9"
-                    HeightRequest="20"
-                    HorizontalOptions="Fill" />
+            x:Name="PhoneNoEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
 
-                <!-- Button to cancel adding a profile, return user to MainPage -->
-
-                <Button
-                    Grid.Row="13" 
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-            
-                    x:Name="CancelButton"
-                    Text="Cancel"
-                    FontFamily="Trebuchet"
-                    FontAttributes="Bold"
-                    FontSize="14"
-                    TextColor="#262626"
+        <!-- Department Text Entry -->
+        <Entry 
+            Grid.Row="4"
+            Grid.Column="3"
+            Margin="10,0"
                 
-                    BackgroundColor="#D9D9D9"
-                    MaximumWidthRequest="150"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="CenterAndExpand"
-                    Clicked="CancelButton_Clicked" />
+            x:Name="DepartmentEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
 
-                <!-- Button to add profile and update database, return user to MainPage -->
-                <Button
-                    Grid.Row="13" 
-                    Grid.Column="3"
-                    Grid.ColumnSpan="2"
+        <!-- Street Text Entry -->
+        <Entry 
+            Grid.Row="5"
+            Grid.Column="3"
+            Margin="10,0"
+                
+            x:Name="StreetEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
+
+        <!-- City Text Entry -->
+        <Entry 
+            Grid.Row="6"
+            Grid.Column="3"
+            Margin="10,0"
+                
+            x:Name="CityEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
+
+        <!-- State Text Entry -->
+        <Entry 
+            Grid.Row="7"
+            Grid.Column="3"
+            Margin="10,0"
+                
+            x:Name="StateEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
+
+        <!-- Zip Text Entry -->
+        <Entry 
+            Grid.Row="8"
+            Grid.Column="3"
+            Margin="10,0"
+                
+            x:Name="ZipEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
+
+        <!-- Country Text Entry -->
+        <Entry 
+            Grid.Row="9"
+            Grid.Column="3"
+            Margin="10,0"
+                
+            x:Name="CountryEntry"
+            Placeholder="|..."
+            PlaceholderColor="#262626"
+            FontFamily="Trebuchet"
+            FontSize="10"
+            TextColor="Black"
+            BackgroundColor="#D9D9D9"
+            HeightRequest="45"
+            HorizontalOptions="Fill" />
+
+        <!-- Button to return user to MainPage, without adding a profile -->
+        <Button
+            Grid.Row="10" 
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="5,10"
             
-                    x:Name="AddProfileButton"
-                    Text="Add Profile"
-                    FontFamily="Trebuchet"
-                    FontAttributes="Bold"
-                    FontSize="14"
-                    TextColor="#262626"    
-                    BackgroundColor="#D9D9D9"
-                    MaximumWidthRequest="150"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="CenterAndExpand"
-                    Clicked="AddEmployee_Clicked" />
+            x:Name="AddProfileCancelButton"
+            Text="Cancel"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"
+            BackgroundColor="#D9D9D9"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="AddProfileCancelButton_Clicked" />
+
+        <!-- Button to add a new profile and update database, then return user to MainPage -->
+        <Button
+            Grid.Row="10" 
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Margin="5,10"
+            
+            x:Name="AddNewProfileButton"
+            Text="Add Profile"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"    
+            BackgroundColor="#D9D9D9"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="AddNewProfileButton_Clicked" />
 
         </Grid>
-
+    </ScrollView>
 </ContentPage>

@@ -2,6 +2,8 @@
 
 namespace MobileApp;
 
+// Represents initial page on application start.
+// Can navigate to the AddProfile, ViewAllProfiles, and Settings page.
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -9,15 +11,23 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    private async void ViewAllProfilesButton_Clicked(object sender, EventArgs e)
+    // Navigates to the ViewAllProfiles page when clicked.
+    private async void NavigateAllProfilesButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushModalAsync(new ViewAllProfilesPage());
-        SemanticScreenReader.Announce(ViewAllProfilesButton.Text);
+        SemanticScreenReader.Announce(NavigateAllProfilesButton.Text);
     }
 
-    private async void AddProfileButton_Clicked(object sender, EventArgs e)
+    // Navigates to the AddProfile page when clicked.
+    private async void NavigateAddProfileButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushModalAsync(new AddProfilePage());
-        SemanticScreenReader.Announce(AddProfileButton.Text);
+        SemanticScreenReader.Announce(NavigateAddProfileButton.Text);
+    }
+
+    // Navigates to the Settings page when clicked.
+    private void NavigateSettingsButton_Clicked(object sender, EventArgs e)
+    {
+
     }
 }

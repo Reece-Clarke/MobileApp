@@ -5,18 +5,16 @@
 
     <ScrollView>
         <!-- UI Placement Setup -->
-        <StackLayout>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="75"/>
-                <RowDefinition Height="75"/>
-                <RowDefinition Height="450"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="0.1*"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width ="Auto"/>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
@@ -28,42 +26,43 @@
                 
                 Source="roi_pattern_3.png"
                 Aspect="AspectFill"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
 
             <!-- ROI Logo -->
             <Image
                 Grid.Row="0"
                 Grid.Column="0"
-                Margin="10,10"
+                Margin="10,15"
                 
                 Source="roi_logo.png"
                 HorizontalOptions="Start"
-                MaximumWidthRequest="644"
-                MaximumHeightRequest="336"
+                HeightRequest="100"
+                WidthRequest="100"
                 />
 
             <!-- Name of App -->
             <Label
                 Grid.Row="0"
                 Grid.Column="1"
-                Margin="10,15"
+                Margin="15,15"
                 
-                Text="Mobile Application Placeholder Name"
+                Text="ROI Mobile Application"
                 FontFamily="Trebuchet"
                 FontSize="21"
                 TextColor="#D9D9D9"
                 HorizontalTextAlignment="Center"
-                HorizontalOptions="Fill"
+                HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
                 />
 
             <!-- Add Profile Button -->
             <Button
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.ColumnSpan="2"
+                Margin="5,0"
                 
-                x:Name="AddProfileButton"
+                x:Name="NavigateAddProfileButton"
                 Text="Add a Profile"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
@@ -73,15 +72,15 @@
                 SemanticProperties.Hint="Navigates to the AddProfile page."
                 MaximumWidthRequest="250"
                 MaximumHeightRequest="50"
-                HorizontalOptions="Fill"
-                Clicked="AddProfileButton_Clicked" />
+                Clicked="NavigateAddProfileButton_Clicked" />
 
             <!-- View All Profiles Button -->
             <Button
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.ColumnSpan="2"
+                Margin="5,0"
                 
-                x:Name="ViewAllProfilesButton"
+                x:Name="NavigateAllProfilesButton"
                 Text="View All Profiles"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
@@ -91,11 +90,28 @@
                 SemanticProperties.Hint="Navigates to the View All Profiles page."
                 MaximumWidthRequest="250"
                 MaximumHeightRequest="50"
-                HorizontalOptions="Fill"
-                Clicked="ViewAllProfilesButton_Clicked" />
+                Clicked="NavigateAllProfilesButton_Clicked" />
+
+            <!-- Settings Button -->
+            <Button
+                Grid.Row="5"
+                Grid.Column="1"
+                Margin="10,10"
+                
+                x:Name="NavigateSettingsButton"
+                Text="Settings"
+                FontFamily="Trebuchet"
+                FontAttributes="Bold"
+                FontSize="14"
+                TextColor="#262626"  
+                BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Navigates to the Settings page."
+                MaximumWidthRequest="100"
+                MaximumHeightRequest="100"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Clicked="NavigateSettingsButton_Clicked" />
 
         </Grid>
-        </StackLayout>
     </ScrollView>
-
 </ContentPage>

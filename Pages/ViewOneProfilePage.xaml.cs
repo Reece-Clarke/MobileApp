@@ -6,43 +6,44 @@ using System.Threading.Tasks;
 
 namespace MobileApp.Pages;
 
+// Page is for viewing the details of one specific profile from the database.
+// From the page, the user can either return to the previous page, or
+// navigate to the UpdateProfile page to change details in the profile and
+// update the database with that information.
 public partial class ViewOneProfilePage : ContentPage
 {
-    // Initialize Database Services
-    Database databaseService;
-    List<Employee> employees = new List<Employee>();
-    SQLiteAsyncConnection _database;
-
     Employee singleEmployee = new Employee();
 
     // Constructor requires an employee record to be used and set.
     public ViewOneProfilePage(Employee employ)
 	{
 		InitializeComponent();
-        databaseService = new Database();
 
         singleEmployee = employ;
 
-        IdDetail.Text = singleEmployee.Id;
-        NameDetail.Text = singleEmployee.Name;
-        PhoneNoDetail.Text = singleEmployee.PhoneNo;
-        DepartmentDetail.Text = singleEmployee.Department;
-        StreetDetail.Text = singleEmployee.Street;
-        CityDetail.Text = singleEmployee.City;
-        StateDetail.Text = singleEmployee.State;
-        ZipDetail.Text = singleEmployee.Zip;
-        CountryDetail.Text = singleEmployee.Country;
+        // Concatenated spaces are for formatting purposes.
+        IdDetail.Text = " " + singleEmployee.Id;
+        NameDetail.Text = " " + singleEmployee.Name;
+        PhoneNoDetail.Text = " " + singleEmployee.PhoneNo;
+        DepartmentDetail.Text = " " + singleEmployee.Department;
+        StreetDetail.Text = " " + singleEmployee.Street;
+        CityDetail.Text = " " + singleEmployee.City;
+        StateDetail.Text = " " + singleEmployee.State;
+        ZipDetail.Text = " " + singleEmployee.Zip;
+        CountryDetail.Text = " " + singleEmployee.Country;
     }
 
-    private async void BackButton2_Clicked(object sender, EventArgs e)
+    // Returns user to previous page.
+    private async void NavigateBackButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PopModalAsync();
-        SemanticScreenReader.Announce(BackButton2.Text);
+        SemanticScreenReader.Announce(NavigateBackButton.Text);
     }
 
-    private async void GoToUpdateProfileButton_Clicked(object sender, EventArgs e)
+    // Sends user to UpdateProfile page, using the current profile's details as information
+    private async void NavigateUpdateProfileButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushModalAsync(new UpdateProfilePage(singleEmployee));
-        SemanticScreenReader.Announce(GoToUpdateProfileButton.Text);
+        SemanticScreenReader.Announce(NavigateUpdateProfileButton.Text);
     }
 }
