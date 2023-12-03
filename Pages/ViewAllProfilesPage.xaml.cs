@@ -14,6 +14,10 @@ public partial class ViewAllProfilesPage : ContentPage
     // Initialize Database Services
     Database databaseService;
 
+    // Used for a double-click function
+    int click = 1;
+    Employee currentEmployee;
+
     public ViewAllProfilesPage()
 	{
         InitializeComponent();
@@ -41,15 +45,42 @@ public partial class ViewAllProfilesPage : ContentPage
     //    }
     //}
 
-    // When a item is tapped or clicked on, navigate to its profile details page
+    // When a item is double-tapped or doubled-clicked on, navigate to its profile details page
     private async void AllProfileListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        if (AllProfileListView.SelectedItem != null)
+        // Assign selected item in profile listview if empty.
+        if (currentEmployee == null)
         {
-            var selectedEmployee = (Employee)AllProfileListView.SelectedItem;
-            await Navigation.PushModalAsync(new ViewOneProfilePage(selectedEmployee));
+            currentEmployee = (Employee)AllProfileListView.SelectedItem;
+        }
+
+        // If the currently assigned employee matches the selected employee in list view.
+        if (currentEmployee == AllProfileListView.SelectedItem)
+        {
+            // If double clicked.
+            if (click == 2)
+            {
+                // Reset clicks on double-click.
+                click = 1;
+                await Navigation.PushModalAsync(new ViewOneProfilePage(currentEmployee));
+            }
+            // Increase clicks to expect a double-click.
+            else
+            {
+                currentEmployee = (Employee)AllProfileListView.SelectedItem;
+                click++;
+            }
+        }
+        // Else Assign the currently selected employee to be the selected employee in list view
+        else
+        {
+            // Resets click in odd cases
+            click = 1;
+            currentEmployee = (Employee)AllProfileListView.SelectedItem;
+            click++;
         }
     }
+
 
     private void RefreshListButton_Clicked(object sender, EventArgs e)
     {
