@@ -14,7 +14,6 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="0.1*"/>
@@ -51,24 +50,9 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />
 
-            <!-- ID label -->
-            <Label 
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="10,0"
-                
-                Text="Id"
-                FontFamily="Trebuchet"
-                FontAttributes="Bold"
-                FontSize="16"
-                TextColor="#D9D9D9"
-                BackgroundColor="#3b3b3b"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
-
             <!-- Name label -->
             <Label 
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
                 Margin="10,0"
                 
@@ -83,7 +67,7 @@
         
             <!-- Phone Number label -->
             <Label 
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -98,7 +82,7 @@
 
             <!-- Department label -->
             <Label 
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -113,7 +97,7 @@
 
             <!-- Street label -->
             <Label 
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -128,7 +112,7 @@
 
             <!-- City label -->
             <Label 
-                Grid.Row="6"
+                Grid.Row="5"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -143,7 +127,7 @@
 
             <!-- State label -->
             <Label 
-                Grid.Row="7"
+                Grid.Row="6"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -158,7 +142,7 @@
 
             <!-- ZIP code label -->
             <Label 
-                Grid.Row="8"
+                Grid.Row="7"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -173,7 +157,7 @@
 
             <!-- Country label -->
             <Label 
-                Grid.Row="9"
+                Grid.Row="8"
                 Grid.Column="0"
                 Margin="10,0"
             
@@ -187,26 +171,9 @@
                 HorizontalOptions="Fill" />
 
             <!-- Unique Profile Entry -->
-            <!-- Id Entry -->
-            <Entry 
-                Grid.Row="1"
-                Grid.Column="3"
-                Margin="10,0"
-                
-                x:Name="IdEntry"
-                Placeholder="{Binding Id}"
-                PlaceholderColor="#262626"
-                FontFamily="Trebuchet"
-                FontSize="10"
-                TextColor="Black"
-                BackgroundColor="#D9D9D9"
-                HeightRequest="45"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="Fill" />
-
             <!-- Name Entry -->
             <Entry 
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="3"
                 Margin="10,0"
            
@@ -223,7 +190,7 @@
 
             <!-- Phone Number Entry -->
             <Entry 
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -240,7 +207,7 @@
 
             <!-- Department Entry -->
             <Entry 
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -257,7 +224,7 @@
 
             <!-- Street Entry -->
             <Entry 
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -274,7 +241,7 @@
 
             <!-- City Entry -->
             <Entry 
-                Grid.Row="6"
+                Grid.Row="5"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -291,7 +258,7 @@
 
             <!-- State Entry -->
             <Entry 
-                Grid.Row="7"
+                Grid.Row="6"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -308,7 +275,7 @@
 
             <!-- Zip Entry -->
             <Entry 
-                Grid.Row="8"
+                Grid.Row="7"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -325,7 +292,7 @@
 
             <!-- Country Entry -->
             <Entry 
-                Grid.Row="9"
+                Grid.Row="8"
                 Grid.Column="3"
                 Margin="10,0"
                 
@@ -343,7 +310,7 @@
             <!-- Button to go back and return user to ViewOneProfilePage, without updating details -->
 
             <Button
-                Grid.Row="10" 
+                Grid.Row="9" 
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Margin="5,10"
@@ -361,7 +328,7 @@
 
             <!-- Button to Update Profile details -->
             <Button
-                Grid.Row="10" 
+                Grid.Row="9" 
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
                 Margin="5,10"

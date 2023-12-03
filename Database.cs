@@ -13,6 +13,7 @@ namespace MobileApp
     {
         // Async connection created.
         SQLiteAsyncConnection _database;
+
         string dbPath;
 
         public Database()

@@ -11,7 +11,7 @@ namespace MobileApp.Pages;
 public partial class AddProfilePage : ContentPage
 {
     Database databaseService;
-
+    int biggestIdNumber;
     public AddProfilePage()
 	{
         InitializeComponent();
@@ -30,11 +30,27 @@ public partial class AddProfilePage : ContentPage
     // returns user to previous page afterwards.
     private async void AddNewProfileButton_Clicked(object sender, EventArgs e)
     {
+        // Id is assigned by finding the biggest id value found in the database, and
+        // adding one to it.
+        // Depending on how a database may handle Ids, old or new, this may not be
+        // suitable, but is a simple placeholder that can be better modified later.
+        List<Employee> findIdList = await databaseService.RetrieveEmployees();
+        foreach (Employee employ in findIdList)
+        {
+            biggestIdNumber = 0;
+            int currentId = int.Parse(employ.Id);
+
+            if (currentId > biggestIdNumber)
+            {
+                biggestIdNumber = currentId + 1;
+            }
+        }
+
         // Create new Employee object to be added a record to the database
         var employee = new Employee
         {
+            Id = biggestIdNumber.ToString(),
             Name = NameEntry.Text,
-            Id = IdEntry.Text,
             PhoneNo = PhoneNoEntry.Text,
             Department = DepartmentEntry.Text,
             Street = StreetEntry.Text,

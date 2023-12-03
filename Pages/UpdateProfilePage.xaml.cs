@@ -24,7 +24,6 @@ public partial class UpdateProfilePage : ContentPage
         singleEmployee = employ;
 
         // Text entry fields as filled with currently selected profile information.
-        IdEntry.Text = singleEmployee.Id;
         NameEntry.Text = singleEmployee.Name;
         PhoneNoEntry.Text = singleEmployee.PhoneNo;
         DepartmentEntry.Text = singleEmployee.Department;
@@ -45,7 +44,6 @@ public partial class UpdateProfilePage : ContentPage
     // Gets and updates an Employee record in the database. NOTE: Remove Id from being allowed to be updated, as it is a primary key, and cannot be updated.
     public async void UpdateProfile_Clicked(object sender, EventArgs e)
     {
-        singleEmployee.Id = IdEntry.Text;
         singleEmployee.Name = NameEntry.Text;
         singleEmployee.PhoneNo = PhoneNoEntry.Text;
         singleEmployee.Department = DepartmentEntry.Text;

@@ -34,17 +34,6 @@ public partial class ViewAllProfilesPage : ContentPage
         SemanticScreenReader.Announce(BackButton1.Text);
     }
 
-    // Sends user to profile details page for selected profile from list
-    //private async void ProfileDetailButton_Clicked(object sender, EventArgs e)
-    //{
-    //    // If a profile has been selected from the list
-    //    if (AllProfileListView.SelectedItem != null)
-    //    {
-    //        var selectedEmployee = (Employee)AllProfileListView.SelectedItem;
-    //        await Navigation.PushModalAsync(new ViewOneProfilePage());
-    //    }
-    //}
-
     // When a item is double-tapped or doubled-clicked on, navigate to its profile details page
     private async void AllProfileListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
