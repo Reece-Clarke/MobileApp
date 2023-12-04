@@ -45,7 +45,7 @@ public partial class AddProfilePage : ContentPage
                 {
                     int currentId = int.Parse(employ.Id);
 
-                    if (currentId > biggestIdNumber)
+                    if (currentId >= biggestIdNumber)
                     {
                         biggestIdNumber = currentId + 1;
                     }
