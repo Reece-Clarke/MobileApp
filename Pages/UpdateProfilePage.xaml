@@ -350,7 +350,7 @@
                 Grid.ColumnSpan="2"
                 Margin="5,10"
             
-                x:Name="UpdateProfile"
+                x:Name="UpdateProfileButton"
                 Text="Confirm Details"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
@@ -360,7 +360,7 @@
                 SemanticProperties.Hint="Updates profile in database with the details entered"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Clicked="UpdateProfile_Clicked" />
+                Clicked="UpdateProfileButton_Clicked" />
         
         </Grid>
     </ScrollView>

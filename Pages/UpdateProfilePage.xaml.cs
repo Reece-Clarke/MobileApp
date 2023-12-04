@@ -40,8 +40,8 @@ public partial class UpdateProfilePage : ContentPage
         SemanticScreenReader.Announce(UpdateProfileCancelButton.Text);
     }
 
-    // Gets and updates an Employee record in the database. NOTE: Remove Id from being allowed to be updated, as it is a primary key, and cannot be updated.
-    public async void UpdateProfile_Clicked(object sender, EventArgs e)
+    // Gets and updates an Employee record in the database, notifies user and returns to ViewOneProfile page.
+    public async void UpdateProfileButton_Clicked(object sender, EventArgs e)
     {
         singleEmployee.Name = NameEntry.Text;
         singleEmployee.PhoneNo = PhoneNoEntry.Text;
