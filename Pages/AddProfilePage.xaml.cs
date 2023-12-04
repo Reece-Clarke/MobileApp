@@ -40,7 +40,7 @@ public partial class AddProfilePage : ContentPage
             List<Employee> findIdList = await databaseService.RetrieveEmployees();
             foreach (Employee employ in findIdList)
             {
-                biggestIdNumber = 0;
+                biggestIdNumber = 1;
                 int currentId = int.Parse(employ.Id);
 
                 if (currentId > biggestIdNumber)
