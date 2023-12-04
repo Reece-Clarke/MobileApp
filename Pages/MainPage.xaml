@@ -48,7 +48,7 @@
                 Margin="15,15"
                 
                 Text="ROI Mobile Application"
-                FontFamily="TrebuchetBold"
+                FontFamily="Trebuchet"
                 FontAttributes="Bold"
                 FontSize="20"
                 TextColor="#D9D9D9"

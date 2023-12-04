@@ -77,7 +77,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#262626"
+            BackgroundColor="#3b3b3b"
             SemanticProperties.Hint="Label for Phone Number."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
@@ -93,7 +93,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#3b3b3b"
+            BackgroundColor="#262626"
             SemanticProperties.Hint="Label for Department."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
@@ -109,7 +109,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#262626"
+            BackgroundColor="#3b3b3b"
             SemanticProperties.Hint="Label for Street."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
@@ -125,7 +125,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#3b3b3b"
+            BackgroundColor="#262626"
             SemanticProperties.Hint="Label for City."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
@@ -141,7 +141,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#262626"
+            BackgroundColor="#3b3b3b"
             SemanticProperties.Hint="Label for State."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
@@ -157,7 +157,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#3b3b3b"
+            BackgroundColor="#262626"
             SemanticProperties.Hint="Label for Zip code."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
@@ -173,7 +173,7 @@
             FontAttributes="Bold"
             FontSize="16"
             TextColor="#D9D9D9"
-            BackgroundColor="#262626"
+            BackgroundColor="#3b3b3b"
             SemanticProperties.Hint="Label for Country."
             VerticalTextAlignment="Center"
             HorizontalOptions="Fill" />
