@@ -38,19 +38,26 @@ public partial class AddProfilePage : ContentPage
             // Depending on how a database may handle Ids, old or new, this may not be
             // suitable, but is a simple placeholder that can be better modified later.
             List<Employee> findIdList = await databaseService.RetrieveEmployees();
-            foreach (Employee employ in findIdList)
-            {
-                biggestIdNumber = 0;
-                int currentId = int.Parse(employ.Id);
 
-                if (currentId > biggestIdNumber)
+            if (findIdList.Count > 0)
+            {
+                foreach (Employee employ in findIdList)
                 {
-                    biggestIdNumber = currentId + 1;
+                    int currentId = int.Parse(employ.Id);
+
+                    if (currentId > biggestIdNumber)
+                    {
+                        biggestIdNumber = currentId + 1;
+                    }
                 }
             }
+            else
+            {
+                biggestIdNumber = 1;
+            }
 
-            // Create new Employee object to be added a record to the database
-            var employee = new Employee
+                // Create new Employee object to be added a record to the database
+                var employee = new Employee
             {
                 Id = biggestIdNumber.ToString(),
                 Name = NameEntry.Text,
