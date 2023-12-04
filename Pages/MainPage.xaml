@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileApp.MainPage">
-
+             xmlns:local="clr-namespace:MobileApp"
+             x:Class="MobileApp.MainPage"
+             >
     <ScrollView>
         <!-- UI Placement Setup -->
         <Grid>
@@ -24,7 +25,7 @@
                 Grid.RowSpan="5"
                 Grid.ColumnSpan="2"
                 
-                Source="roi_pattern_3.png"
+                Source="{Binding background}"
                 Aspect="AspectFill"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
@@ -38,8 +39,7 @@
                 Source="roi_logo.png"
                 HorizontalOptions="Start"
                 HeightRequest="100"
-                WidthRequest="100"
-                />
+                WidthRequest="100" />
 
             <!-- Name of App -->
             <Label
@@ -48,13 +48,13 @@
                 Margin="15,15"
                 
                 Text="ROI Mobile Application"
-                FontFamily="Trebuchet"
-                FontSize="21"
+                FontFamily="TrebuchetBold"
+                FontAttributes="Bold"
+                FontSize="20"
                 TextColor="#D9D9D9"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"
-                />
+                VerticalOptions="CenterAndExpand" />
 
             <!-- Add Profile Button -->
             <Button
@@ -63,7 +63,7 @@
                 Margin="5,0"
                 
                 x:Name="NavigateAddProfileButton"
-                Text="Add a Profile"
+                Text="Add Profile"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
                 FontSize="14"

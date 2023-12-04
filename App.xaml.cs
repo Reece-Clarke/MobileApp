@@ -10,6 +10,5 @@ namespace MobileApp
 
             MainPage = new MainPage();
         }
-
     }
 }

@@ -12,7 +12,6 @@ namespace MobileApp.Pages;
 public partial class UpdateProfilePage : ContentPage
 {
     Database databaseService;
-
     Employee singleEmployee;
 
     // Using an Employee class, it sets the appropriate information to each text entry field as a placeholder.
@@ -56,6 +55,7 @@ public partial class UpdateProfilePage : ContentPage
     // Update selected Employee in database, through another function
         await databaseService.UpdateEmployeeAsync(singleEmployee);
         await DisplayAlert("Action successful", "Profile has been updated.", "OK");
+        SemanticScreenReader.Announce("Profile updated.");
         await Navigation.PopModalAsync();
     }
 }

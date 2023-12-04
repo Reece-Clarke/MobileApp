@@ -63,6 +63,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#3b3b3b"
+                SemanticProperties.Hint="Label for ID"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -78,6 +79,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#262626"
+                SemanticProperties.Hint="Label for full name"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -93,6 +95,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#262626"
+                SemanticProperties.Hint="Label for phone number"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -108,6 +111,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#3b3b3b"
+                SemanticProperties.Hint="Label for Department"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -123,6 +127,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#262626"
+                SemanticProperties.Hint="Label for Street"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -138,6 +143,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#3b3b3b"
+                SemanticProperties.Hint="Label for City"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -153,6 +159,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#262626"
+                SemanticProperties.Hint="Label for State"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -168,6 +175,7 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#3b3b3b"
+                SemanticProperties.Hint="Label for Zip code"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -183,9 +191,9 @@
                 FontSize="16"
                 TextColor="#D9D9D9"
                 BackgroundColor="#262626"
+                SemanticProperties.Hint="Label for Country"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
-
 
             <!-- Profile Details  of current profile -->
             <!-- Id Details -->
@@ -195,11 +203,12 @@
                 Margin="10,0"
                 
                 x:Name="IdDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for Id number."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
         
@@ -210,11 +219,12 @@
                 Margin="10,0"
            
                 x:Name="NameDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for full name."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -225,11 +235,12 @@
                 Margin="10,0"
                 
                 x:Name="PhoneNoDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for Phone Number."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -240,11 +251,12 @@
                 Margin="10,0"
                 
                 x:Name="DepartmentDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for Department."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -255,11 +267,12 @@
                 Margin="10,0"
                 
                 x:Name="StreetDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for Street."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -270,11 +283,12 @@
                 Margin="10,0"
                 
                 x:Name="CityDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for City."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -285,11 +299,12 @@
                 Margin="10,0"
                 
                 x:Name="StateDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for State."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -300,11 +315,12 @@
                 Margin="10,0"
                 
                 x:Name="ZipDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for Zip code."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -315,11 +331,12 @@
                 Margin="10,0"
                 
                 x:Name="CountryDetail"
-                Text="Name"
+                Text=""
                 FontFamily="Trebuchet"
                 FontSize="10"
                 TextColor="Black"
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Details for country."
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Fill" />
 
@@ -331,17 +348,18 @@
                 Grid.ColumnSpan="2"
                 Margin="5,10"
             
-                x:Name="NavigateBackButton"
+                x:Name="ViewOneProfileBackButton"
                 Text="Back"
                 FontFamily="Trebuchet"
                 FontAttributes="Bold"
                 FontSize="14"
                 TextColor="#262626"
+                SemanticProperties.Hint="Returns user back to the View All Profiles page."
                 
                 BackgroundColor="#D9D9D9"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Clicked="NavigateBackButton_Clicked" />
+                Clicked="ViewOneProfileBackButton_Clicked" />
 
             <!-- Button to go to Update Profile page -->
             <Button
@@ -357,6 +375,7 @@
                 FontSize="14"
                 TextColor="#262626"    
                 BackgroundColor="#D9D9D9"
+                SemanticProperties.Hint="Navigates to the Update Profile page."
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Clicked="NavigateUpdateProfileButton_Clicked" />

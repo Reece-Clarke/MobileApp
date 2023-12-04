@@ -28,10 +28,10 @@ public partial class ViewAllProfilesPage : ContentPage
     }
 
     // Returns user to previous page.
-    private async void BackButton1_Clicked(object sender, EventArgs e)
+    private async void AllProfilesBackButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PopModalAsync();
-        SemanticScreenReader.Announce(BackButton1.Text);
+        SemanticScreenReader.Announce(AllProfilesBackButton.Text);
     }
 
     // When a item is double-tapped or doubled-clicked on, navigate to its profile details page

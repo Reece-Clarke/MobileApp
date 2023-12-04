@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Pages.SettingsPage"
+             Title="SettingsPage">
+
+    <ScrollView>
+        <!-- UI Placement Setup -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Background Image -->
+            <Image
+            Grid.Row="0"
+            Grid.RowSpan="5"
+            Grid.ColumnSpan="3"
+                
+            Source="grey_texture_image.png"
+            Aspect="AspectFill"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+
+            <!-- Settings Page Header -->
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                Margin="15,15"
+                
+                Text="Settings"
+                FontFamily="Trebuchet"
+                FontSize="21"
+                TextColor="#D9D9D9"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+            
+            <!-- Background box for options -->
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="1"
+                Margin="5,5"
+                Color="#262626" />
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="2"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="1"
+                Margin="5,5"
+                Color="#262626" />
+
+
+            <!-- Note: Settings currently only affect Main Page -->
+
+            <!-- Dark Mode for Backgrounds -->
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="10,10"
+                
+                Text="Dark Backgrounds"
+                FontFamily="Trebuchet"
+                FontAttributes="Bold"
+                FontSize="16"
+                TextColor="#D9D9D9"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            
+            <!-- Switch for Dark Backgrounds -->
+            <Switch
+                Grid.Row="1"
+                Grid.Column="2"
+                Margin="10,10"
+                
+                x:Name="DarkBackgroundSwitch"
+                SemanticProperties.Hint="Toggles dark background options."
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Toggled="DarkBackgroundSwitch_Toggled" />
+
+            <!-- Button to return back to MainPage -->
+            <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10,10"
+            
+            x:Name="SettingsBackButton"
+            Text="Back"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"  
+            BackgroundColor="#D9D9D9"
+            SemanticProperties.Hint="Navigates back to the Main Page."
+            WidthRequest="150"
+            MaximumWidthRequest="250"
+            MaximumHeightRequest="50"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Clicked="SettingsBackButton_Clicked"/>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

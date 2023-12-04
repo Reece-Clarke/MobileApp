@@ -50,16 +50,16 @@ public partial class ViewOneProfilePage : ContentPage
     }
 
     // Returns user to previous page.
-    private async void NavigateBackButton_Clicked(object sender, EventArgs e)
+    private async void ViewOneProfileBackButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PopModalAsync();
-        SemanticScreenReader.Announce("Returning to View All Profiles Page");
+        SemanticScreenReader.Announce(ViewOneProfileBackButton.Text);
     }
 
     // Sends user to UpdateProfile page, using the current profile's details as information
     private async void NavigateUpdateProfileButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushModalAsync(new UpdateProfilePage(singleEmployee));
-        SemanticScreenReader.Announce("Heading to Update Profile Page.");
+        SemanticScreenReader.Announce(NavigateUpdateProfileButton.Text);
     }
 }

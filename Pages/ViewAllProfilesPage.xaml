@@ -28,27 +28,6 @@
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand" />
 
-        <!-- Button to return back to MainPage -->
-        <Button
-            Grid.Row="0"
-            Grid.Column="0"
-            Margin="10,10"
-            
-            x:Name="BackButton1"
-            Text="Back"
-            FontFamily="Trebuchet"
-            FontAttributes="Bold"
-            FontSize="14"
-            TextColor="#262626"  
-            BackgroundColor="#D9D9D9"
-            SemanticProperties.Hint="Navigates back to the Main Page."
-            WidthRequest="150"
-            MaximumWidthRequest="250"
-            MaximumHeightRequest="50"
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Clicked="BackButton1_Clicked"/>
-
         <!-- Viewing All Profiles Header -->
         <Label
             Grid.Row="0"
@@ -92,7 +71,8 @@
                             FontFamily="TrebuchetBold"
                             FontAttributes="Bold"
                             FontSize="20"
-                            TextColor="#ffffff" />
+                            TextColor="#ffffff"
+                            SemanticProperties.Hint="ID Header." />
                         <!-- Name Header for listview-->
                         <Label
                             Grid.Column="1"
@@ -100,7 +80,8 @@
                             FontFamily="TrebuchetBold"
                             FontAttributes="Bold"
                             FontSize="20"
-                            TextColor="#ffffff" />
+                            TextColor="#ffffff"
+                            SemanticProperties.Hint="Name Header." />
                     </Grid>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -121,6 +102,7 @@
                                     FontAttributes="Bold"
                                     FontSize="16"
                                     TextColor="#D9D9D9"
+                                    SemanticProperties.Hint="{Binding Id}"
                                     
                                     VerticalTextAlignment="Center"
                                     HorizontalOptions="Fill"
@@ -139,6 +121,7 @@
                                     FontAttributes="Bold"
                                     FontSize="16"
                                     TextColor="#D9D9D9"
+                                    SemanticProperties.Hint="{Binding Name}"
                                     
                                     VerticalTextAlignment="Center"
                                     HorizontalOptions="Fill"/>
@@ -155,7 +138,7 @@
             </ListView>
         </ScrollView>
 
-        <!-- Button to go into refresh profile list details -->
+        <!-- Button to refresh profile list details -->
         <Button
             Grid.Row="2"
             Grid.Column="0"
@@ -168,12 +151,12 @@
             FontSize="14"
             TextColor="#262626"  
             BackgroundColor="#D9D9D9"
-            SemanticProperties.Hint="Refreshes profile list details."
+            SemanticProperties.Hint="Updates list of profiles."
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Clicked="RefreshListButton_Clicked" />
 
-        <!-- Button to go into delete a selected item -->
+        <!-- Button to delete a selected item -->
         <Button
             Grid.Row="2"
             Grid.Column="1"
@@ -190,6 +173,27 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Clicked="DeleteProfileButton_Clicked" />
+
+        <!-- Button to return back to MainPage -->
+        <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10,10"
+            
+            x:Name="AllProfilesBackButton"
+            Text="Back"
+            FontFamily="Trebuchet"
+            FontAttributes="Bold"
+            FontSize="14"
+            TextColor="#262626"  
+            BackgroundColor="#D9D9D9"
+            SemanticProperties.Hint="Navigates back to the Main Page."
+            WidthRequest="150"
+            MaximumWidthRequest="250"
+            MaximumHeightRequest="50"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Clicked="AllProfilesBackButton_Clicked"/>
 
     </Grid>
 </ContentPage>
